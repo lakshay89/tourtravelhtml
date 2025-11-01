@@ -46,6 +46,275 @@
 ====================================================================
 
  ***/
+.slider-area {
+  position: relative;
+}
+
+.slider-area.style-1 {
+  position: relative;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+.slider-area.style-1 .banner-shape-1 {
+  position: absolute;
+  top: 23.4%;
+  left: 5%;
+  -webkit-animation: fadeInLeft 1s alternate infinite;
+  animation: fadeInLeft 1s alternate infinite;
+}
+
+@media (max-width: 1400px) {
+  .slider-area.style-1 .banner-shape-1 {
+    top: 14%;
+    left: 1%;
+  }
+}
+
+.slider-area.style-1 .banner-shape-2 {
+  position: absolute;
+  bottom: 0;
+  left: 5.3%;
+  -webkit-animation: fadeInUp 1s alternate infinite;
+  animation: fadeInUp 1s alternate infinite;
+}
+
+@media (max-width: 1200px) {
+  .slider-area.style-1 .banner-shape-2 {
+    height: 60px;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .slider-area.style-1 .banner-shape-2 {
+    display: none;
+  }
+}
+
+.slider-area.style-1 .banner-shape-3 {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  -webkit-animation: fadeInLeft 5s alternate infinite;
+  animation: fadeInLeft 5s alternate infinite;
+}
+
+.slider-area.style-1 .banner-shape-4 {
+  position: absolute;
+  bottom: 8%;
+  right: 4.8%;
+  -webkit-animation: fadeInDown 1s alternate infinite;
+  animation: fadeInDown 1s alternate infinite;
+}
+
+@media (max-width: 992px) {
+  .slider-area.style-1 .banner-shape-4 {
+    display: none;
+  }
+}
+
+.slider-area .slider-wrapper .slick-active .slider-short-title,
+.slider-area .slider-wrapper .slick-active .slider-title,
+.slider-area .slider-wrapper .slick-active .slider-short-desc,
+.slider-area .slider-wrapper .slick-active .slider-btn-wrapper {
+  -webkit-animation-name: MovefadeUp;
+  animation-name: MovefadeUp;
+  -webkit-animation-fill-mode: both;
+}
+
+.slider-area .slider-wrapper .slick-active .slider-short-title {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+}
+
+.slider-area .slider-wrapper .slick-active .slider-title {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.slider-area .slider-wrapper .slick-active .slider-short-desc {
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+}
+
+.slider-area .slider-wrapper .slick-active .slider-btn-wrapper {
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+  -webkit-animation-duration: 0.9s;
+  animation-duration: 0.9s;
+}
+
+.slider-area .slider-wrapper .slick-dots {
+  display: none;
+  gap: 20px;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  right: 46px;
+  transform: translateY(-50%);
+  z-index: 2;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .slider-area .slider-wrapper .slick-dots {
+    display: none !important;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 30px;
+    bottom: 70px;
+    top: unset;
+    left: unset;
+    right: unset;
+    transform: none;
+  }
+}
+
+.slider-area .slider-wrapper .slick-dots li {
+  display: inline-block;
+  line-height: 0;
+  outline: 1px solid transparent;
+  border: 4px solid transparent;
+  border-radius: 50px;
+  transition: all 0.5s ease-out;
+}
+
+.slider-area .slider-wrapper .slick-dots li button {
+  font-size: 0;
+  padding: 0;
+  width: 11px;
+  height: 11px;
+  background-color: #c3e4de;
+  border-radius: 50px;
+  position: relative;
+  transition: all 0.5s ease-out;
+}
+
+.slider-area .slider-wrapper .slick-dots li button:hover {
+  background-color: rgb(255, 103, 49);
+  transition: all 0.5s ease-out;
+}
+
+.slider-area .slider-wrapper .slick-dots li.slick-active {
+  transition: all 0.5s ease-out;
+  outline: 1px solid rgb(255, 103, 49);
+}
+
+.slider-area .slider-wrapper .slick-dots li.slick-active button {
+  transition: all 0.5s ease-out;
+}
+
+.slider-area .single-slider {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  z-index: 2;
+  height: 650px;
+}
+
+@media (max-width: 1200px) {
+  .slider-area .single-slider {
+    height: 700px;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .slider-area .single-slider {
+    height: auto;
+  }
+}
+
+.slider-area .single-slider .slider-content-wrapper {
+  position: relative;
+  z-index: 99;
+  padding-top: 48px;
+}
+
+@media (max-width: 992px) {
+  .slider-area .single-slider .slider-content-wrapper {
+    padding-top: 140px;
+  }
+}
+
+@media (max-width: 767px) {
+  .slider-area .single-slider .slider-content-wrapper {
+    padding-top: 80px;
+  }
+}
+
+.slider-area .single-slider .slider-content-wrapper .slider-content {
+  position: relative;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .slider-area .single-slider .slider-content-wrapper .slider-content {
+    text-align: center;
+  }
+}
+
+.slider-area .single-slider .slider-content-wrapper .slider-content .topbar-shape {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: -47px;
+  margin-top: -25px;
+  -webkit-animation: tada 5s alternate infinite;
+  animation: tada 5s alternate infinite;
+}
+
+@media (max-width: 1400px) {
+  .slider-area .single-slider .slider-content-wrapper .slider-content .topbar-shape {
+    height: 50px;
+    margin: 0;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .slider-area .single-slider .slider-content-wrapper .slider-content .topbar-shape {
+    height: 50px;
+    margin: 0;
+    top: -8px;
+    right: 0;
+  }
+}
+
+.slider-area .single-slider .slider-content-wrapper .slider-content .bottom-shape {
+  margin-top: -40px;
+}
+
+.slider-area .single-slider .slider-content-wrapper .slider-content .slider-short-title {
+  font-family: "Fasthand", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #3B71FE;
+  display: inline-block;
+  width: 100%;
+  cursor: default;
+}
+
+/* Responsive and more styles continue for slider area ... */
+
+.location-filter-wrapper {
+  /* Styles for location filter wrapper */
+}
+
+.location-filter-card.style-1 {
+  /* Styles for location filter card */
+}
 
 body {
   font-family: 'Poppins', sans-serif;
